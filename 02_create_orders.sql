@@ -1,0 +1,7 @@
+CREATE TABLE ORDERS (
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    customer_id INTEGER NOT NULL REFERENCES CUSTOMERS (id),
+    product_name VARCHAR(255) NOT NULL,
+    amount INTEGER NOT NULL
+);
